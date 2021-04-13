@@ -10,8 +10,8 @@ public class App {
         CreditCard CreditCard2 = new CreditCard("4534 5535 4355 1235", "Diamond", "Grivni", "Big");
         System.out.println(CreditCard2);
 
-        CreditCard CreditCard3 = new CreditCard("4534 5535 4355 1235", "Diamond", "Grivni",
-                "Big", "Privat", "Randomniy CHel", 676, 3.3, "Tokyo Choul", 400);
+        CreditCard CreditCard3 = new CreditCard("4534 5455 5676 2356", "Wood", "Shekeli",
+                "Big", 44255, "Privat", "Randomniy CHel", 676, 3.3, "Tokyo Choul");
         System.out.println(CreditCard3);
         CreditCard.printStaticBankAccount();
         CreditCard1.printBankAccount();

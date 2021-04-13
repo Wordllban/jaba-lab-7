@@ -1,19 +1,20 @@
 package main.java.creditCard;
 
 public class CreditCard {
-    private static double bankAccount = 0;
+    private static int creditLimit = 300;
     private String number = "1111 2222 3333 4444";
     private String cardType = "Default";
     private String currency = "$";
 
-    private String cardSize = "Default";
+    private double bankAccount = 0;
     private String bank = "N/A";
     private String userName = "N/A";
     private int cvv = 777;
     private double cashBack = 1.1;
 
+    protected String cardSize = "Default";
     protected String cardPrint = "Default";
-    protected int creditLimit = 300;
+
 
     public CreditCard(String number, String cardType, String currency, String cardSize) {
         this.number = number;
@@ -22,37 +23,27 @@ public class CreditCard {
         this.cardSize = cardSize;
     }
 
-    public CreditCard(String number, String cardType, String currency, String cardSize, String bank, String userName,
-                      int cvv, double cashBack, String cardPrint, int creditLimit) {
+    public CreditCard(String number, String cardType, String currency, String cardSize, double bankAccount, String bank, String userName,
+                      int cvv, double cashBack, String cardPrint) {
         this(number, cardType, currency, cardSize);
+        this.bankAccount = bankAccount;
         this.bank = bank;
         this.userName = userName;
         this.cvv = cvv;
         this.cashBack = cashBack;
         this.cardPrint = cardPrint;
-        this.creditLimit = creditLimit;
     }
 
     public CreditCard() {
-        bankAccount += 1;
-        number = "1337 3228 8223 4959";
-        cardType = "Gold";
-        currency = "Euro";
-        cardSize = "50mm x 30mm";
-        bank = "Monobank";
-        userName = "Brain Dead";
-        cvv = 666;
-        cashBack = 2.0;
-        cardPrint = "IoT";
-        creditLimit = 322;
+        creditLimit++;
     }
 
-    public static double getBankAccount() {
+    public double getBankAccount() {
         return bankAccount;
     }
 
-    public static void setBankAccount(double bankAccount) {
-        CreditCard.bankAccount = bankAccount;
+    public void setBankAccount(double bankAccount) {
+        this.bankAccount = bankAccount;
     }
 
     public String getNumber() {
@@ -127,12 +118,12 @@ public class CreditCard {
         this.cardPrint = cardPrint;
     }
 
-    public int getCreditLimit() {
+    public static int getCreditLimit() {
         return creditLimit;
     }
 
-    public void setCreditLimit(int creditLimit) {
-        this.creditLimit = creditLimit;
+    public static void setCreditLimit(int creditLimit) {
+        CreditCard.creditLimit = creditLimit;
     }
 
     @Override
@@ -152,25 +143,25 @@ public class CreditCard {
     }
 
     public static void printStaticBankAccount() {
-        System.out.println("You have " + bankAccount + " in your bank account ");
+        System.out.println("You have " + creditLimit + " credit limit left");
     }
 
     public void printBankAccount() {
-        System.out.println("You have " + bankAccount + " " + currency + " in your bank account ");
+        System.out.println("You have " + creditLimit + " credit limit left");
     }
 
-    public void resetResult(String number, String cardType, String currency, String cardSize, String bank,
-                      String userName, int cvv, double cashBack, String cardPrint, int creditLimit) {
+    public void resetResult(String number, String cardType, String currency, String cardSize, double bankAccount, String bank,
+                      String userName, int cvv, double cashBack, String cardPrint) {
         this.number = number;
         this.cardType = cardType;
         this.currency = currency;
         this.cardSize = cardSize;
+        this.bankAccount = bankAccount;
         this.bank = bank;
         this.userName = userName;
         this.cvv = cvv;
         this.cashBack = cashBack;
         this.cardPrint = cardPrint;
-        this.creditLimit = creditLimit;
     }
 }
 
