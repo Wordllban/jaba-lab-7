@@ -1,6 +1,4 @@
-package main.java.creditCard;
-
-import main.java.creditCard.CreditCard;
+package main.java.entity;
 
 public class App {
     public static void main(String[] args){

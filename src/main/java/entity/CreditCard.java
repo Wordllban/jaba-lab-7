@@ -1,4 +1,4 @@
-package main.java.creditCard;
+package main.java.entity;
 
 public class CreditCard {
     private static int creditLimit = 300;
