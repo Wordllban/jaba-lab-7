@@ -2,18 +2,18 @@ package main.java.creditCard;
 
 public class CreditCard {
     private static int creditLimit = 300;
-    private String number = "1111 2222 3333 4444";
-    private String cardType = "Default";
-    private String currency = "$";
+    private String number;
+    private String cardType;
+    private String currency;
 
-    private double bankAccount = 0;
-    private String bank = "N/A";
-    private String userName = "N/A";
-    private int cvv = 777;
-    private double cashBack = 1.1;
+    private double bankAccount;
+    private String bank;
+    private String userName;
+    private int cvv;
+    private double cashBack;
 
-    protected String cardSize = "Default";
-    protected String cardPrint = "Default";
+    protected String cardSize;
+    protected String cardPrint;
 
 
     public CreditCard(String number, String cardType, String currency, String cardSize) {
@@ -36,6 +36,16 @@ public class CreditCard {
 
     public CreditCard() {
         creditLimit++;
+        this.number = "1111 2222 3333 4444";
+        this.cardType = "Default";
+        this.currency = "$";
+        this.bankAccount = 0;
+        this.bank = "N/A";
+        this.userName = "N/A";
+        this.cvv = 777;
+        this.cashBack = 1.1;
+        this.cardSize = "Default";
+        this.cardPrint = "Default";
     }
 
     public double getBankAccount() {
@@ -150,8 +160,8 @@ public class CreditCard {
         System.out.println("You have " + creditLimit + " credit limit left");
     }
 
-    public void resetResult(String number, String cardType, String currency, String cardSize, double bankAccount, String bank,
-                      String userName, int cvv, double cashBack, String cardPrint) {
+    public void resetResult(String number, String cardType, String currency, String cardSize, double bankAccount,
+                            String bank, String userName, int cvv, double cashBack, String cardPrint) {
         this.number = number;
         this.cardType = cardType;
         this.currency = currency;
@@ -164,8 +174,3 @@ public class CreditCard {
         this.cardPrint = cardPrint;
     }
 }
-
-
-
-
-

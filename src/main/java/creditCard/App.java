@@ -4,16 +4,16 @@ import main.java.creditCard.CreditCard;
 
 public class App {
     public static void main(String[] args){
-        CreditCard CreditCard1 = new CreditCard();
-        System.out.println(CreditCard1);
+        CreditCard defaultCreditCard = new CreditCard();
+        System.out.println(defaultCreditCard);
 
-        CreditCard CreditCard2 = new CreditCard("4534 5535 4355 1235", "Diamond", "Grivni", "Big");
-        System.out.println(CreditCard2);
+        CreditCard diamondCreditCard = new CreditCard("4534 5535 4355 1235", "Diamond", "Grivni", "Big");
+        System.out.println(diamondCreditCard);
 
-        CreditCard CreditCard3 = new CreditCard("4534 5455 5676 2356", "Wood", "Shekeli",
+        CreditCard woodCreditCard = new CreditCard("4534 5455 5676 2356", "Wood", "Shekeli",
                 "Big", 44255, "Privat", "Randomniy CHel", 676, 3.3, "Tokyo Choul");
-        System.out.println(CreditCard3);
+        System.out.println(woodCreditCard);
         CreditCard.printStaticBankAccount();
-        CreditCard1.printBankAccount();
+        defaultCreditCard.printBankAccount();
     }
 }
